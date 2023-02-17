@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - Prints alphabets in lower and upper case
+ * main - prints alphabets in lower and upper case
  * Return: Always 0
  */
-int (void)
+int main(void)
 {
 	char ch;
 
