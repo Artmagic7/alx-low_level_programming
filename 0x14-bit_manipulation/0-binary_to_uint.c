@@ -4,7 +4,7 @@
 /**
 * binary_to_uint - This func converts a Binary num to unsigned int
 * @b: Binary num string
-* Return: Binary num's int
+* Return: Binary num int
 */
 unsigned int binary_to_uint(const char *b)
 {
