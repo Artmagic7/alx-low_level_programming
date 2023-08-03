@@ -1,29 +1,26 @@
-#ifndef _FLIP_BITS_
-#define _FLIP_BITS_
-
 #include "main.h"
 
 /**
- * flip_bits - returns the number of bits needed to flip to get from one
- * number to another
- * @n: first number
- * @m: second number
+ * flip_bits - The num of bits to change is counted
+ * to move from a num to another
+ * @n: 1st num
+ * @m: 2nd num
  *
- * Return: number of bits needed to flip
+ * Return: Num of bits that will be changed
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int xor_result = n ^ m;
-	unsigned int count = 0;
+	int v, count = 0;
+	unsigned long int current;
+	unsigned long int exclusive = n ^ m;
 
-	while (xor_result)
+	for (v = 63; v >= 0; v--)
 	{
-		count += (xor_result & 1);
-		xor_result >>= 1;
+		current = exclusive >> v;
+		if (current & 1)
+			count++;
 	}
 
 	return (count);
 }
-
-#endif /* _FLIP_BITS_ */
 
